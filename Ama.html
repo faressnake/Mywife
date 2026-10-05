@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لأمة 🤍</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#050407;
+    color:#fff;
+    font-family:"Segoe UI",Tahoma,sans-serif;
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:0;
+    background:
+        radial-gradient(circle at 50% 15%,rgba(190,55,110,.18),transparent 35%),
+        radial-gradient(circle at 15% 80%,rgba(110,35,90,.12),transparent 35%);
+}
+
+section{
+    min-height:100vh;
+    padding:90px 20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    z-index:1;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    text-align:center;
+}
+
+h1,h2{
+    font-family:Georgia,serif;
+}
+
+h2{
+    font-size:clamp(38px,9vw,70px);
+    margin-bottom:25px;
+}
+
+p{
+    color:#d7cbd0;
+    line-height:2.15;
+    font-size:16px;
+}
+
+.tag{
+    color:#dd86a6;
+    font-size:12px;
+    letter-spacing:3px;
+    margin-bottom:18px;
+}
+
+/* INTRO */
+
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:
+        radial-gradient(circle at center,#351725,#110910 45%,#030204);
+    transition:1.6s ease;
+}
+
+.intro-content{
+    width:90%;
+    max-width:700px;
+}
+
+.intro-small{
+    color:#dc9bb3;
+    letter-spacing:4px;
+    font-size:13px;
+    opacity:0;
+    animation:fadeUp 1.5s forwards .4s;
+}
+
+.intro-title{
+    font-family:Georgia,serif;
+    font-size:clamp(70px,18vw,135px);
+    margin-top:20px;
+    text-shadow:0 0 45px rgba(220,90,140,.4);
+    opacity:0;
+    animation:fadeUp 1.6s forwards 1s;
+}
+
+.intro-text{
+    color:#cdbec5;
+    line-height:2;
+    margin-top:10px;
+    opacity:0;
+    animation:fadeUp 1.5s forwards 1.9s;
+}
+
+.enter{
+    margin-top:38px;
+    padding:15px 40px;
+    border-radius:50px;
+    border:1px solid #cb6389;
+    background:rgba(255,255,255,.03);
+    color:#fff;
+    cursor:pointer;
+    font-size:15px;
+    opacity:0;
+    animation:fadeUp 1.5s forwards 2.7s;
+    transition:.4s;
+}
+
+.enter:hover{
+    background:#c65d85;
+    transform:translateY(-4px);
+    box-shadow:0 0 35px rgba(198,93,133,.4);
+}
+
+/* MUSIC */
+
+.music{
+    position:fixed;
+    top:18px;
+    left:18px;
+    z-index:5000;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:8px;
+    border-radius:50px;
+    background:rgba(12,8,12,.78);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.08);
+    opacity:0;
+    transform:translateY(-20px);
+    transition:.6s;
+}
+
+.music.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.music button{
+    width:42px;
+    height:42px;
+    border:0;
+    border-radius:50%;
+    background:#c65d85;
+    color:white;
+    cursor:pointer;
+}
+
+.music span{
+    font-size:11px;
+    color:#d3c6cc;
+    padding:0 10px;
+}
+
+/* HERO */
+
+.hero{
+    background:radial-gradient(circle at center,rgba(180,50,105,.17),transparent 55%);
+}
+
+.hero-heart{
+    font-size:65px;
+    animation:beat 2s infinite;
+}
+
+.hero h1{
+    font-size:clamp(75px,18vw,140px);
+    margin-top:10px;
+    text-shadow:0 0 45px rgba(220,90,140,.3);
+}
+
+.hero-sub{
+    color:#db91ad;
+    font-size:17px;
+}
+
+/* LETTER */
+
+.letter-section{
+    background:linear-gradient(180deg,#080609,#120a10);
+}
+
+.letter{
+    margin-top:35px;
+    padding:40px 30px;
+    text-align:right;
+    border-radius:25px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(220,120,160,.15);
+    box-shadow:0 25px 90px rgba(0,0,0,.4);
+    position:relative;
+}
+
+.letter:before{
+    content:"";
+    position:absolute;
+    right:0;
+    top:12%;
+    width:4px;
+    height:76%;
+    background:#c55d86;
+    border-radius:10px;
+}
+
+.letter p{
+    margin-bottom:20px;
+}
+
+.highlight{
+    color:#efa6c0;
+}
+
+/* LOVE */
+
+.love{
+    background:#090609;
+}
+
+.love-text{
+    max-width:700px;
+    margin:auto;
+}
+
+.love-words{
+    margin-top:45px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+}
+
+.word{
+    padding:13px 20px;
+    border-radius:50px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(220,120,160,.18);
+    color:#e1d4da;
+    transition:.4s;
+}
+
+.word:hover{
+    transform:translateY(-5px);
+    background:#b9577d;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:40px;
+}
+
+.card{
+    padding:30px 20px;
+    border-radius:23px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(220,120,160,.4);
+}
+
+.card-icon{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#eda4bd;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:14px;
+}
+
+/* HEART BUTTON */
+
+.heart-section{
+    background:radial-gradient(circle at center,rgba(150,40,90,.16),transparent 55%);
+}
+
+.big-heart{
+    width:150px;
+    height:150px;
+    margin:35px auto;
+    border:0;
+    background:transparent;
+    font-size:100px;
+    cursor:pointer;
+    animation:beat 1.7s infinite;
+    transition:.4s;
+}
+
+.big-heart:hover{
+    transform:scale(1.15);
+}
+
+.heart-message{
+    min-height:70px;
+    color:#eaa3bc;
+    font-size:17px;
+}
+
+/* SECRET */
+
+.secret-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+    margin-top:35px;
+}
+
+.secret-btn{
+    padding:14px 22px;
+    border-radius:50px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(220,120,160,.25);
+    color:#ddd0d6;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.secret-btn:hover{
+    background:#bd587f;
+    transform:translateY(-3px);
+}
+
+.secret-box{
+    max-height:0;
+    overflow:hidden;
+    transition:.8s ease;
+    margin-top:0;
+}
+
+.secret-box.open{
+    max-height:500px;
+    margin-top:30px;
+}
+
+.secret-content{
+    padding:30px;
+    border-radius:25px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(220,120,160,.15);
+    color:#d7cbd0;
+    line-height:2.2;
+}
+
+/* GIFT */
+
+.gift-section{
+    background:linear-gradient(180deg,#080609,#10080d);
+}
+
+.gift{
+    font-size:110px;
+    cursor:pointer;
+    display:inline-block;
+    animation:floatGift 2s infinite;
+    transition:.5s;
+}
+
+.gift:hover{
+    transform:scale(1.15);
+}
+
+.gift-text{
+    margin-top:25px;
+    color:#e4d4db;
+}
+
+.gift-result{
+    display:none;
+    margin:35px auto 0;
+    max-width:650px;
+    padding:35px 25px;
+    border-radius:25px;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(220,120,160,.2);
+    animation:fadeUp 1s;
+}
+
+.gift-result.show{
+    display:block;
+}
+
+/* FUTURE */
+
+.future{
+    background:radial-gradient(circle at center,rgba(150,40,90,.14),transparent 55%);
+}
+
+.future-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:35px;
+}
+
+.future-card{
+    padding:25px 18px;
+    border-radius:20px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.future-card span{
+    font-size:28px;
+    display:block;
+    margin-bottom:10px;
+}
+
+/* PROMISE */
+
+.promise{
+    background:#080609;
+}
+
+.promise-box{
+    padding:45px 25px;
+    border-radius:30px;
+    background:rgba(255,255,255,.025);
+    border:1px solid rgba(220,120,160,.15);
+}
+
+.promise-list{
+    list-style:none;
+    margin-top:30px;
+}
+
+.promise-list li{
+    margin:18px 0;
+    color:#d7cbd0;
+}
+
+.promise-list span{
+    color:#e38fac;
+    margin-left:8px;
+}
+
+/* END SURPRISE */
+
+.before-end{
+    min-height:80vh;
+}
+
+.end-black{
+    position:fixed;
+    inset:0;
+    background:#020103;
+    z-index:9998;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+}
+
+.end-black.show{
+    display:flex;
+    animation:fadeIn 2s;
+}
+
+.end-content{
+    max-width:700px;
+}
+
+.end-small{
+    color:#a8949d;
+    margin-bottom:25px;
+}
+
+.end-main{
+    font-family:Georgia,serif;
+    font-size:clamp(35px,8vw,70px);
+    line-height:1.5;
+}
+
+.end-line{
+    margin-top:25px;
+    color:#d5c7cd;
+    line-height:2.2;
+}
+
+/* FINAL */
+
+.final{
+    background:radial-gradient(circle at center,rgba(180,50,105,.2),transparent 55%);
+}
+
+.final p{
+    max-width:680px;
+    margin:auto;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:40px;
+}
+
+.btn{
+    padding:15px 32px;
+    border-radius:50px;
+    font-family:inherit;
+    cursor:pointer;
+    transition:.4s;
+    font-size:15px;
+}
+
+.forgive{
+    border:0;
+    background:#c65c85;
+    color:white;
+}
+
+.forgive:hover{
+    transform:scale(1.07);
+    box-shadow:0 10px 45px rgba(198,92,133,.4);
+}
+
+.angry{
+    background:transparent;
+    color:#d0c1c7;
+    border:1px solid #59424d;
+}
+
+#response{
+    margin-top:30px;
+    min-height:35px;
+    color:#efa5be;
+}
+
+.goodbye{
+    opacity:0;
+    transform:translateY(20px);
+    transition:1.5s;
+    margin-top:40px;
+}
+
+.goodbye.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.goodbye-title{
+    font-family:Georgia,serif;
+    font-size:clamp(35px,8vw,60px);
+}
+
+/* FOOTER */
+
+footer{
+    padding:30px;
+    text-align:center;
+    color:#756a70;
+    font-size:12px;
+    background:#030204;
+}
+
+/* HEARTS */
+
+.floating{
+    position:fixed;
+    bottom:-30px;
+    pointer-events:none;
+    z-index:20;
+    animation:floatUp linear forwards;
+}
+
+/* REVEAL */
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes fadeIn{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.12)}
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:.7;
+    }
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes floatGift{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    section{
+        padding:80px 16px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .future-list{
+        grid-template-columns:1fr;
+    }
+
+    .letter{
+        padding:30px 22px;
+    }
+
+    p{
+        font-size:15px;
+    }
+
+    .music{
+        left:10px;
+        top:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<div class="music" id="musicBox">
+    <button id="musicBtn" onclick="toggleMusic()">▶</button>
+    <span>🎵 أغنية لأمة</span>
+</div>
+
+<div id="intro">
+    <div class="intro-content">
+
+        <div class="intro-small">
+            حاجة صغيرة حاب نقولهالك...
+        </div>
+
+        <div class="intro-title">
+            أمة 🤍
+        </div>
+
+        <div class="intro-text">
+            ما نعرفش إذا نقدر نعبرلك مليح بالكلام...
+            <br>
+            بصح حبيت نجرب هاذ المرة من قلبي.
+        </div>
+
+        <button class="enter" onclick="enterSite()">
+            افتحيها 🤍
+        </button>
+
+    </div>
+</div>
+
+
+<section class="hero">
+    <div class="container reveal">
+
+        <div class="hero-heart">🤍</div>
+
+        <h1>أمة</h1>
+
+        <div class="hero-sub">
+            حبيت نكتبلك حاجة من قلبي...
+        </div>
+
+    </div>
+</section>
+
+
+<section class="letter-section">
+
+    <div class="container reveal">
+
+        <div class="tag">
+            قبل كل حاجة
+        </div>
+
+        <h2>
+            حاب نقولك سمحيلي.
+        </h2>
+
+        <div class="letter">
+
+            <p>
+                أمة...
+            </p>
+
+            <p>
+                ما راحش نكذب عليك ونقولك بلي ما غلطتش
+                ولا نحاول نلقى أعذار لكل حاجة صرات.
+            </p>
+
+            <p>
+                بالعكس...
+                أنا عارف وين قصرت معاك.
+            </p>
+
+            <p>
+                ما كنتش نرضيك كيما لازم
+                وما كنتش ديما واقف معاك كيما كنتي تستحقي.
+            </p>
+
+            <p>
+                ويمكن خليتك في بعض المرات تحسي
+                بلي راكي وحدك،
+                وهذا أكثر حاجة نادم عليها.
+            </p>
+
+            <p>
+                خاطر الإنسان لي يحب شخص
+                لازم يخليه يحس بلي عندو ظهر،
+                ماشي يخليه يزيد يتعب.
+            </p>
+
+            <p>
+                وكي فكرت في كلامك مليح
+                فهمت بلي ما كانش لازم ندافع على روحي...
+                كان لازم نفهمك.
+            </p>
+
+            <p>
+                <span class="highlight">
+                    سمحيلي يا أمة.
+                </span>
+            </p>
+
+            <p>
+                سمحيلي على كل مرة قصرت فيها،
+                وكل مرة كان لازم نكون قريب وما كنتش،
+                وكل مرة كنتي تستناي مني حاجة بسيطة
+                وما عطيتهاش لك.
+            </p>
+
+            <p>
+                ما نطلبش منك تنساي كلش في لحظة.
+                غير حبيت تعرفي بلي أنا فهمت.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="love">
+
+    <div class="container reveal">
+
+        <div class="tag">
+            بصح كاين حاجة أخرى...
+        </div>
+
+        <h2>
+            علاش راكي غالية عندي؟
+        </h2>
+
+        <p class="love-text">
+
+            بصراحة مرات نحس بلي مهما نحكي عليك
+            ما نلقاش الكلمات لي تكفي.
+
+            <br><br>
+
+            راكي من الناس لي وجودهم وحدو
+            يقدر يبدل نهار كامل.
+
+        </p>
+
+        <div class="love-words">
+
+            <div class="word">ضحكتك 🤍</div>
+            <div class="word">طريقة كلامك</div>
+            <div class="word">حنانك</div>
+            <div class="word">غيرتك 🥺</div>
+            <div class="word">اهتمامك</div>
+            <div class="word">زعافك 😂</div>
+            <div class="word">قلبك</div>
+            <div class="word">تفاصيلك الصغيرة</div>
+
+        </div>
+
+        <p style="margin-top:40px">
+
+            بصح أجمل حاجة فيك؟
+
+            <br><br>
+
+            أنك أمة.
+
+            <br>
+
+            وما كاين حتى وحدة تشبهك.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container reveal">
+
+        <div class="tag">
+            كي نشوفك أنا
+        </div>
+
+        <h2>
+            ما نقدرش نوصفك بكلمة وحدة.
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="card-icon">🌹</div>
+                <h3>جميلة</h3>
+                <p>
+                    وماشي غير في الشكل...
+                    في الطريقة لي تكوني بيها أنتِ.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🤍</div>
+                <h3>حنونة</h3>
+                <p>
+                    حتى كي تكوني زعفانة،
+                    يبقى فيك جانب حنين ما يتخباش.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">✨</div>
+                <h3>مميزة</h3>
+                <p>
+                    عندك حاجة خاصة فيك
+                    تخلي وجودك ما يتنساش.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="heart-section">
+
+    <div class="container reveal">
+
+        <div class="tag">
+            اضغطي هنا
+        </div>
+
+        <h2>
+            عندي حاجة صغيرة نقولهالك.
+        </h2>
+
+        <button class="big-heart" onclick="heartMessage()">
+            ❤️
+        </button>
+
+        <div class="heart-message" id="heartMessage">
+            اضغطي على القلب...
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container reveal">
+
+        <div class="tag">
+            حاجة حابك تعرفيها
+        </div>
+
+        <h2>
+            كان لازم ندير هاذ الشي من قبل.
+        </h2>
+
+        <p>
+            ما كانش لازم تستناي مني باش نجي نرضيك.
+
+            <br><br>
+
+            ما كانش لازم تطلبي الاهتمام.
+
+            <br><br>
+
+            وما كانش لازم توصلي لمرحلة
+            تحسي فيها بلي الشخص لي تحبيه
+            ما راهوش واقف معاك.
+
+            <br><br>
+
+            أنا فهمت هاذ الشي.
+            وحاب نصلحو بالفعل ماشي غير بالكلام.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container reveal">
+
+        <div class="tag">
+            حاجة خاصة ليك
+        </div>
+
+        <h2>
+            افتحي وحدة...
+        </h2>
+
+        <p>
+            ما نعرفش أي وحدة راح تختاري 😂
+            بصح كل وحدة فيها كلام من قلبي.
+        </p>
+
+        <div class="secret-buttons">
+
+            <button class="secret-btn" onclick="secret(1)">
+                إذا مازال زعفانة 🥺
+            </button>
+
+            <button class="secret-btn" onclick="secret(2)">
+                إذا حبيتي تعرفي واش نحس 🤍
+            </button>
+
+            <button class="secret-btn" onclick="secret(3)">
+                حاجة ما قلتهاش قبل 🌹
+            </button>
+
+        </div>
+
+        <div class="secret-box" id="secretBox">
+
+            <div class="secret-content" id="secretContent"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="gift-section">
+
+    <div class="container reveal">
+
+        <div class="tag">
+            عندي مفاجأة صغيرة
+        </div>
+
+        <h2>
+            أمة... افتحي الهدية 🎁
+        </h2>
+
+        <div class="gift" onclick="openGift()">
+            🎁
+        </div>
+
+        <p class="gift-text">
+            اضغطي عليها...
+        </p>
+
+        <div class="gift-result" id="giftResult">
+
+            <h2 style="font-size:40px">
+                المفاجأة 🤍
+            </h2>
+
+            <p>
+
+                إذا وصلتي لهنا،
+                حبيت نقولك حاجة:
+
+                <br><br>
+
+                أنا ما حبيتش ندير موقع كامل
+                غير باش نقول "سمحيلي".
+
+                <br><br>
+
+                حبيت ندير حاجة تخليك تشوفي
+                بلي راكي تستاهلي الكلام الحلو
+                والاهتمام والفرحة.
+
+                <br><br>
+
+                <strong>
+                    وأتمنى نكون أنا الشخص
+                    لي يعطيك هاذ الإحساس.
+                </strong>
+
+                <br><br>
+
+                🤍🌹
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="future">
+
+    <div class="container reveal">
+
+        <div class="tag">
+            وما نحبش نوقف عند الاعتذار
+        </div>
+
+        <h2>
+            نحب نصنع حاجات حلوة معاك.
+        </h2>
+
+        <p>
+            ما نحبش نبقى نصلح الماضي برك...
+            نحب يكون عندنا مستقبل أجمل.
+        </p>
+
+        <div class="future-list">
+
+            <div class="future-card">
+                <span>🌙</span>
+                نتمشاو في الليل ونهدروا على كلش.
+            </div>
+
+            <div class="future-card">
+                <span>☕</span>
+                نقعدو ساعات نحكيو بلا ما نحسو بالوقت.
+            </div>
+
+            <div class="future-card">
+                <span>😂</span>
+                نضحكو على حاجات تافهة حتى يوجعنا بطننا.
+            </div>
+
+            <div class="future-card">
+                <span>📸</span>
+                نصنعو ذكريات جديدة.
+            </div>
+
+            <div class="future-card">
+                <span>🫂</span>
+                نكون الشخص لي تلقايه وقت تحتاجيه.
+            </div>
+
+            <div class="future-card">
+                <span>🤍</span>
+                ونخلي الأيام الجاية أحسن من لي فاتت.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="promise">
+
+    <div class="container reveal">
+
+        <div class="tag">
+            وعد
+        </div>
+
+        <h2>
+            ما راحش نوعدك بالمثالية.
+        </h2>
+
+        <div class="promise-box">
+
+            <p>
+                نقدر نغلط مرة أخرى،
+                بصح ما نحبش نكرر نفس الغلط
+                وأنا عارف بلي يوجعك.
+            </p>
+
+            <ul class="promise-list">
+
+                <li>
+                    <span>♡</span>
+                    نسمعك أكثر.
+                </li>
+
+                <li>
+                    <span>♡</span>
+                    نكون واقف معاك أكثر.
+                </li>
+
+                <li>
+                    <span>♡</span>
+                    ما نخليش العناد يبعدنا.
+                </li>
+
+                <li>
+                    <span>♡</span>
+                    نرضيك بالفعل قبل الكلام.
+                </li>
+
+                <li>
+                    <span>♡</span>
+                    ونخليك تحسي بلي عندك واحد تقدرِي تعتمدي عليه.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="before-end">
+
+    <div class="container reveal">
+
+        <div class="tag">
+            وصلنا للنهاية...
+        </div>
+
+        <h2>
+            بصح استناي.
+        </h2>
+
+        <p>
+            كاين حاجة أخيرة ما شفتِيهاش.
+        </p>
+
+        <button class="enter" style="opacity:1;animation:none" onclick="finalSurprise()">
+            افتحي الأخيرة 🤍
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="final">
+
+    <div class="container reveal">
+
+        <div class="hero-heart">
+            🥺🤍
+        </div>
+
+        <div class="tag">
+            آخر كلمة مني
+        </div>
+
+        <h2>
+            أمة...
+        </h2>
+
+        <p>
+
+            ما نطلبش منك تنساي زعافك.
+
+            <br><br>
+
+            وما نطلبش منك تسامحيني
+            غير خاطر كتبتلك كلام حلو.
+
+            <br><br>
+
+            نطلب غير فرصة نوريك
+            بالفعل بلي نقدر نكون أحسن.
+
+            <br><br>
+
+            سمحيلي على كل مرة حسيتك فيها وحدك.
+
+            <br><br>
+
+            سمحيلي على كل مرة ما رضيتكش فيها.
+
+            <br><br>
+
+            وسمحيلي على كل مرة كنتي تحتاجيني
+            وما لقيتيش مني الوقفة لي تستاهليها.
+
+            <br><br>
+
+            <strong>
+                راكي غالية عليا أكثر
+                مما قدرت نوريك.
+            </strong>
+
+        </p>
+
+        <div class="buttons">
+
+            <button class="btn forgive" onclick="forgive()">
+                نعطيك فرصة 🤍
+            </button>
+
+            <button class="btn angry" onclick="angry(this)">
+                مازال زعفانة 🥺
+            </button>
+
+        </div>
+
+        <div id="response"></div>
+
+        <div class="goodbye" id="goodbye">
+
+            <div class="goodbye-title">
+                شكراً يا أمة 🤍
+            </div>
+
+            <p>
+                هاذ المرة نخلي أفعالي تهدر.
+            </p>
+
+            <div style="font-size:45px;margin-top:20px">
+                🫂🤍🌹
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    من واحد يحبك ويتمنى يشوفك ديما فرحانة 🤍
+</footer>
+
+
+<!-- FINAL SURPRISE -->
+
+<div class="end-black" id="endBlack">
+
+    <div class="end-content">
+
+        <div class="end-small">
+            كنتي تحسبي الموقع سالى...
+        </div>
+
+        <div class="end-main">
+            بصح نسيت نقولك علاش نحبك.
+        </div>
+
+        <div class="end-line">
+            ما نحبكش غير كي تكوني فرحانة.
+            <br>
+            نحبك حتى كي تكوني زعفانة.
+            <br>
+            نحبك في تفاصيلك لي يمكن حتى أنتِ ما تنتبهيش ليها.
+            <br>
+            ونحب وجودك في حياتي أكثر مما نقدر نشرح.
+            <br><br>
+            أمة...
+            <br>
+            سمحيلي على الماضي،
+            وخلييني نحاول نخلي الجاي أحلى. 🤍
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* MUSIC */
+
+const music=document.getElementById("music");
+const musicBtn=document.getElementById("musicBtn");
+const musicBox=document.getElementById("musicBox");
+
+let playing=false;
+
+function enterSite(){
+
+    music.volume=0;
+
+    music.play().then(()=>{
+
+        playing=true;
+        musicBtn.innerHTML="⏸";
+
+        let v=0;
+
+        const fade=setInterval(()=>{
+
+            v+=.02;
+
+            music.volume=Math.min(v,.35);
+
+            if(v>=.35)
+                clearInterval(fade);
+
+        },100);
+
+    }).catch(()=>{});
+
+    musicBox.classList.add("show");
+
+    const intro=document.getElementById("intro");
+
+    intro.style.opacity="0";
+
+    setTimeout(()=>{
+
+        intro.style.display="none";
+
+    },1600);
+}
+
+function toggleMusic(){
+
+    if(playing){
+
+        music.pause();
+
+        musicBtn.innerHTML="▶";
+
+        playing=false;
+
+    }else{
+
+        music.play();
+
+        music.volume=.35;
+
+        musicBtn.innerHTML="⏸";
+
+        playing=true;
+    }
+}
+
+
+/* REVEAL */
+
+const observer=new IntersectionObserver(entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting)
+            entry.target.classList.add("show");
+
+    });
+
+},{threshold:.15});
+
+document.querySelectorAll(".reveal")
+.forEach(el=>observer.observe(el));
+
+
+/* HEART */
+
+function heartMessage(){
+
+    const box=document.getElementById("heartMessage");
+
+    box.innerHTML=
+    "هذا قلبي كي تكوني قريبة... 🤍<br><br>وحتى كي نختلفو، مكانك فيه ما يتبدلش.";
+
+    for(let i=0;i<12;i++)
+        setTimeout(createHeart,i*100);
+}
+
+
+/* SECRET */
+
+const secrets={
+
+1:
+"عندك الحق تزعفي مني.<br><br>ما راحش نقولك ما تزعفيش وكأن إحساسك ما عندوش قيمة. خذي وقتك... وأنا بدل ما نضغط عليك نحب نوريك بالفعل بلي فهمت الغلط.",
+
+2:
+"نحس بالندم على كل موقف كان لازم نكون فيه جنبك وما كنتش.<br><br>ونحس بالخوف نكون خسرت إنسانة غالية بسبب تقصيري.<br><br>وبصراحة... ما نحبش نخسرك.",
+
+3:
+"الحاجة لي ما قلتهاش قبل هي بلي مرات الإنسان ما يعرفش قيمة الحاجة حتى يشوفها تتألم بسببو.<br><br>وأنا اليوم فهمت بلي ما يكفيش نحبك في قلبي... لازم نخليك تحسي بهذا الحب في تصرفاتي."
+
+};
+
+function secret(n){
+
+    document.getElementById("secretContent")
+    .innerHTML=secrets[n];
+
+    document.getElementById("secretBox")
+    .classList.add("open");
+}
+
+
+/* GIFT */
+
+function openGift(){
+
+    const result=document.getElementById("giftResult");
+
+    result.classList.add("show");
+
+    for(let i=0;i<18;i++)
+        setTimeout(createHeart,i*100);
+}
+
+
+/* FINAL SURPRISE */
+
+function finalSurprise(){
+
+    const black=document.getElementById("endBlack");
+
+    black.classList.add("show");
+
+    setTimeout(()=>{
+
+        black.classList.remove("show");
+
+        window.scrollTo({
+            top:document.body.scrollHeight,
+            behavior:"smooth"
+        });
+
+    },9000);
+}
+
+
+/* FORGIVE */
+
+function forgive(){
+
+    document.getElementById("response").innerHTML=
+    "🥹🤍 شكراً على الفرصة... هاذ المرة نخلي أفعالي تهدر.";
+
+    document.getElementById("goodbye")
+    .classList.add("show");
+
+    for(let i=0;i<25;i++)
+        setTimeout(createHeart,i*90);
+}
+
+
+/* ANGRY */
+
+function angry(button){
+
+    document.getElementById("response").innerHTML=
+    "عندك الحق... خذي وقتك، ما راحش نضغط عليك. 🤍";
+
+    button.style.transform=
+    "translate("+
+    (Math.random()*60-30)+
+    "px,"+
+    (Math.random()*30-15)+
+    "px)";
+}
+
+
+/* FLOATING HEARTS */
+
+function createHeart(){
+
+    const heart=document.createElement("div");
+
+    heart.className="floating";
+
+    const symbols=[
+        "🤍","♡","♥","🌸","✨","🥺"
+    ];
+
+    heart.innerHTML=
+    symbols[
+        Math.floor(Math.random()*symbols.length)
+    ];
+
+    heart.style.left=
+    Math.random()*100+"vw";
+
+    heart.style.fontSize=
+    (12+Math.random()*22)+"px";
+
+    heart.style.animationDuration=
+    (5+Math.random()*6)+"s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },12000);
+}
+
+setInterval(createHeart,1100);
+
+</script>
+
+</body>
+</html>
